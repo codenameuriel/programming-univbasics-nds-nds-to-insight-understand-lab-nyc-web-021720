@@ -7,15 +7,17 @@ def pretty_print_nds(nds)
 end
 
 def print_first_directors_movie_titles
-  outer_hash_index = 0 
-  while outer_hash_index < directors_database.length do
-    if directors_database[outer_hash_index] == 0 
-      inner_hash_index = 0 
-      puts directors_database[outer_hash_index][:movies][:inner_hash_index][:title]
+   outer_index = 0
+    while outer_index < $directors_database.length do
+        if outer_index == 0
+            movies_index = 0
+            while movies_index < $directors_database[outer_index][:movies].length do
+                puts $directors_database[outer_index][:movies][movies_index][:title]
+                movies_index += 1
+            end
+        end
+        outer_index += 1
     end
-    inner_hash_index += 1 
-  end
-  outer_hash_index += 1
 end
 
 pretty_print_nds(directors_database)
