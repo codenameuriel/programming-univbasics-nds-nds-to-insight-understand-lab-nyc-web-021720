@@ -12,7 +12,7 @@ def print_first_directors_movie_titles
     if outer_index == 0
       directors_database[outer_index][:movies].length.times do |i|
         puts directors_database[outer_index][:movies][i][:title]
-            end
+      end
         end
         outer_index += 1
     end
